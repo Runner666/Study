@@ -1,4 +1,4 @@
-[**一个比较好的Markdown教程**](http://www.jianshu.com/p/4Q3aay)
+[**界面超级友好的Markdown教程**](http://www.jianshu.com/p/4Q3aay)
 
 [**markdown下载地址**](http://pan.baidu.com/s/1mi8Z7Iw)
 
