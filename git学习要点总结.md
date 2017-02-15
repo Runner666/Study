@@ -59,7 +59,6 @@ git tag -d 标签名:删除不需要的标签
 5)将本地仓库与远程仓库连接起来（git remote add origin git@github.com:houtu/News.git）  
 （该命令说明：远程仓库的名字是origin，以后每次向远程仓库推送只需用orgin即代替了远程仓库的具体URL）  
 6)推送本地内容到远程仓库（git push -u origin master）  
-注：每次打开git bash后第一次push，系统会要求输入github的用户名（houtu）和密码
 
 本地Java原码管理注意：  
 我们获得了一份JAVA工程源码，在本地我们需要用eclipse来进行开发，eclipse会为项目生 成.classpath .project .settings等eclipse特有的文件（夹），
