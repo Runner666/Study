@@ -9,3 +9,5 @@
 原因：oci.dll版本不对。因为Navicat是通过Oracle客户端连接Oracle服务器的，Oracle的客户端分为两种，一种是标准版，一种是简洁版，即Oracle Install Client。而我们用Navicat时通常会在自己的安装路径下包含多个版本的OCI，如果使用Navicat连接Oracle服务器出现ORA-28547错误时，多数是因为Navicat本地的OCI版本与Oracle服务器服务器不符造成的。  
 解决办法：下载OCI使之与我们所安装的Oracle服务器（版本号）相符合。解压下载的文件，在Navicat客户端里修改OCI的路径（工具--选择--OCI:将OCI library指向刚解压出来的OCI文件）
 [OCI下载地址](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html)
+
+4.PL/sql下切换用户：connect username;根据提示输入口令。（连接管理员：connect sys / as sysdba;）
