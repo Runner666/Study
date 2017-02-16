@@ -11,3 +11,31 @@
 [OCI下载地址](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html)
 
 4.PL/sql下切换用户：connect username;根据提示输入口令。（连接管理员：connect sys / as sysdba;）
+
+5.账号：scott 密码:tiger   账号:system 密码:manager  账号:sys  密码:任意字符
+我们一般使用的是用scott登录sysdba，这时候有可能出现账户未解锁的状态，这时候可以在sys用户下执行
+
+	alter user scott account unlock;
+	
+来解锁账户。解锁之后可能会要求你改密码：可以用
+
+	alter user scott identified by tiger;
+再登录
+
+	conn scott/tiger;
+
+6.查询表结构:desc 表名
+
+7.字符串和字符串连接
+Java中的字符串使用""，oracle中字符串使用''，例如'123'
+Java中字符串连接是 + 号 ,oracle中字符串连接是 || 号
+需求：查员工的姓名和月薪, 数据的显示格式如下   
+姓名: SMITH，月薪:800
+	
+	select '姓名:'||ename || ',月薪:' || sal as ename_sal from emp
+	
+如果字符串中本身就有’，想显示这个单引号,需要使用两个单引号进行转义,即’’代表‘
+例如想显示 员工姓名 连接上 123’4 需要使用如下sql语句
+
+	select ename||'123''4' from emp
+	
