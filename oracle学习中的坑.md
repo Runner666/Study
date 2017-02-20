@@ -41,7 +41,7 @@ Java中字符串连接是 + 号 ,oracle中字符串连接是 || 号
 	
 8.事务之COMMIT/ROLLBACK  
 数据库事务起始于SQL语句，终止于以下4种事件之一：  
-1、COMMIT或ROLLBACK语句  
+1、COMMIT或ROLLBACK语句  
 2、DDL/DCL隐式提交  
 3、用户退出时自动提交  
 4、系统强行关闭时取消事务事务结束后，下一条SQL语句将开始一个新的事务。
