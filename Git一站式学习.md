@@ -27,8 +27,7 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
 
     ssh-keygen -t rsa -b 4096 -C "2544762494@qq.com"  
     clip < ~/.ssh/id_rsa.pub复制key，然后粘贴到github上的Key区域
-    
-    git remote add origin git@github.com/houtu/test.git
+    git remote add origin git@github.com/houtu/test.git
 
 ###8.本地仓库与远程仓库的同步  
 >文件变动  
@@ -78,8 +77,8 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
      git tag -d 标签名:删除不需要的标签  
      git push origin <tagname>:将某标签推送到远程仓库  
      git push origin --tags:推送本地仓库所有的标签到远程仓库
-     git checkout tagname:切换到指定的tag  
-     git checkout -b branch tagname:创建一个基于tagname标签的分支
+     git checkout tagname:切换到指定的tag
+     git checkout -b branch tagname:创建一个基于tagname标签的分支
 
  标签可以用于回退查看，但是回退之前最好在当前位置打一个标签，以便于查看完再回到原来位置；  
  还可以用于基于某标签创建分支
