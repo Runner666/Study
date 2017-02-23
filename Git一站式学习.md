@@ -49,7 +49,7 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
     git push
 
     git add .
-    git commit -m "提交说明"
+    git commit -m "提交说明"  
     git push
   
 
@@ -91,7 +91,7 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
   
 >在b1分支上添加一个新文件
 
-    git add .
+    git add .  
     git commit -m "在b1分支上添加了一个新文件"
   
 >切换到主分支
@@ -100,6 +100,5 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
   
 >在分支上融合另一个分支
 
-    git merge b1
-
+    git merge b1
 ###11.GitHub社区一些操作的简介
