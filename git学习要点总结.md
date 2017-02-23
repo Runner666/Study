@@ -40,7 +40,7 @@ git pull: 更新当前分支
 git checkout -b 分支名(该命令将创建分支和切换分支融合在了一起)  
 git branch:查询所有分支，当前分支前有一个*  
 git checkout master:转换到master分支，在该分支上融合新分支git merge 分支名  
-删除不需要的分支:git branch -d 分支名
+git branch -d 分支名:删除不需要的分支
 
 在分支上打标签:  
 首先切换到需要打标签的分支，git tag 标签名  
