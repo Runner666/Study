@@ -37,7 +37,8 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
     git rm --cached 从版本库中移除，但保留在磁盘中（即不再跟踪该文件）  
     git checkout 恢复用rm 删除且没有提交的文件，不可恢复用git rm 删除的文件
 
->引入工作区、暂存区stage、版本库的概念  
+>引入工作区、暂存区stage、版本库的概念
+
 >>![仓库概念图](repository.png)  
 >挖坑:两次git push 失败！  
 
@@ -67,7 +68,7 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
      
 >标签的应用
     
-    git tag 标签名:新建标签  
+     git tag 标签名:新建标签  
     git tag :查看所有标签  
     git show 标签名:查看标签信息  
     git tag -a 标签名 -m "说明信息":打一个带说明的标签  
