@@ -3,7 +3,7 @@
 
 ###2.Git下载
 >[官网地址](https://git-scm.com/downloads)  
->[网盘下载](http://pan.baidu.com/s/1i5n1EMp) 提取码：gloc  
+>[网盘下载](http://pan.baidu.com/s/1i5n1EMp) 提取码：gloc  
 安装
 
 ###3.Git配置
