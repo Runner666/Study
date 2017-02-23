@@ -27,7 +27,7 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
 
     ssh-keygen -t rsa -b 4096 -C "2544762494@qq.com"  
     clip < ~/.ssh/id_rsa.pub复制key，然后粘贴到github上的Key区域
-    git remote add origin git@github.com/houtu/test.git
+    git remote add origin git@github.com：houtu/test.git
 
 ###8.本地仓库与远程仓库的同步  
 >文件变动  
