@@ -50,8 +50,7 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
     git push
 
     git add .
-    git commit -m "提交说明"
-    
+    git commit -m "提交说明"  
     git push
   
 
@@ -61,30 +60,21 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
 
     git add 2.txt  
     git commit -m "再来一个文件"  
-    git push
+    git push
 >HEAD的概念
 
-     git log :查看提交日志 
-     
+     git log :查看提交日志  
      git reset --hard 5b69ddb1a7f8fe4db98c6bc5a8711d4eec43e311(提交的记录点)：回退到指定版本
 >标签的应用
 
-     git tag 标签名
-     
-     git tag:查看所有标签
-     
-     git show 标签名：查看标签信息
-     
-     git tag -a 标签名 -m "说明信息":打一个带说明的标签
-     
-     git tag -d 标签名:删除不需要的标签
-     
-     git push origin <tagname>:将某标签推送到远程仓库
-     
-     git push origin --tags:推送本地仓库所有的标签到远程仓库
-     
-     git checkout tagname:可切换到指定tag
-     
+     git tag 标签名  
+     git tag:查看所有标签  
+     git show 标签名：查看标签信息  
+     git tag -a 标签名 -m "说明信息":打一个带说明的标签  
+     git tag -d 标签名:删除不需要的标签  
+     git push origin <tagname>:将某标签推送到远程仓库  
+     git push origin --tags:推送本地仓库所有的标签到远程仓库  
+     git checkout tagname:可切换到指定tag  
      checkout -b branch tagname创建一个基于指定tagname的分支
  
  标签可以用于回退查看，但是回退之前最好在当前位置打一个标签，以便于查看完再回到原来位置；  
