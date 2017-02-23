@@ -79,7 +79,6 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
      git push origin --tags:推送本地仓库所有的标签到远程仓库
      git checkout tagname:切换到指定的tag  
      git checkout -b branch tagname:创建一个基于tagname标签的分支  
-    
  标签可以用于回退查看，但是回退之前最好在当前位置打一个标签，以便于查看完再回到原来位置；  
  还可以用于基于某标签创建分支
  
