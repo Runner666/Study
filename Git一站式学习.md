@@ -1,7 +1,10 @@
 ###1.Git简介  
 >分布式的概念，相比较与cvs svn
 
-###2.Git[下载](https://git-scm.com/downloads)－－安装
+###2.Git下载
+>[官网地址](https://git-scm.com/downloads)  
+>[网盘下载]提取码：gloc（http://pan.baidu.com/s/1i5n1EMp）  
+安装
 
 ###3.Git配置
 
