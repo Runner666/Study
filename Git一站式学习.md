@@ -56,6 +56,9 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
     
 总结结论:只有在版本库里的文件才能被push远程仓库
 
+>直接从远程仓库克隆一个仓库到本地
+
+    git clone git@github.com:houtu/test.git
 ###9.Git版本管理
 
     git add 2.txt  
@@ -102,4 +105,7 @@ GitHub 于 2008 年 4 月 10 日正式上线，除了 Git 代码仓库托管及�
 >在分支上融合另一个分支
 
     git merge b1
+>删除不需要的b1分支
+
+    git branch -d b1
 ###11.GitHub社区一些操作的简介
