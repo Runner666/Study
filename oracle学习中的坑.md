@@ -47,12 +47,12 @@
 >4、系统强行关闭时取消事务事务结束后，下一条SQL语句将开始一个新的事务。
 
 9.隐式事务提交：  
->   一个事务在下列情况下会被自动提交:DDL语句 DCL语句;用户正常退出数据库，而缺少显式的COMMIT或者ROLLBACK.  
+>  一个事务在下列情况下会被自动提交:DDL语句 DCL语句;用户正常退出数据库，而缺少显式的COMMIT或者ROLLBACK.  
 >  一个事务在下列情况下会被自动回退;用户异常退出数据库;系统强行关闭.
    
 10.oracle数据库可以用create or replace的对象有：functions, procedures, packages, types, synonyms, trigger and views，就是没有table，也没有sequence。
 
-1.SQL Select语句完整的执行顺序:  
+11.SQL Select语句完整的执行顺序:  
 >1、from子句组装来自不同数据源的数据；  
 >2、where子句基于指定的条件对记录行进行筛选；  
 >3、group by子句将数据划分为多个分组；  
