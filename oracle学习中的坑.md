@@ -49,3 +49,5 @@ Java中字符串连接是 + 号 ,oracle中字符串连接是 || 号
 9.隐式事务提交：  
    一个事务在下列情况下会被自动提交:DDL语句 DCL语句;用户正常退出数据库，而缺少显式的COMMIT或者ROLLBACK.  
    一个事务在下列情况下会被自动回退;用户异常退出数据库;系统强行关闭.
+   
+10.oracle数据库可以用create or replace的对象有：functions, procedures, packages, types, synonyms, trigger and views，就是没有table，也没有sequence。
