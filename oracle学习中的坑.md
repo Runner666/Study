@@ -13,7 +13,7 @@
 4.PL/sql下切换用户：connect username;根据提示输入口令。（连接管理员：connect sys / as sysdba;）
 
 5.账号：scott 密码:tiger   账号:system 密码:manager  账号:sys  密码:任意字符
->我们一般使用的是用scott登录sysdba，这时候有可能出现账户未解锁的状态，这时候可以在sys用户下执行
+>我们一般使用的是scott登录sysdba，这时候有可能出现账户未解锁的状态，这时候可以在sys用户下执行
 
 	alter user scott account unlock;
 	
@@ -63,3 +63,5 @@
 >8、使用order by对结果集进行排序。
 
 12.别名中有特殊字符（空格、小括号、数字···），要用双引号括起来
+
+13.[权限管理](http://www.cnblogs.com/shlcn/archive/2011/07/21/2112879.html)
