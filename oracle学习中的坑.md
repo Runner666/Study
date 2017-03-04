@@ -67,3 +67,18 @@
 13.[权限管理](http://www.cnblogs.com/shlcn/archive/2011/07/21/2112879.html)
 
 14.创建视图语句里含有 with check option 子句时，当你操作视图时就会受到创建视图的where子句的限制。
+
+15.varchar/varchar2/nvarchar/nvarchar2的区别和联系:  
+>1)联系：
+>>它们都是用来存储可变长度的字符串  
+它们的值都是1~4000
+
+2)区别:  
+>>varchar/varchar2其值(1~4000)表示字节  
+varchar2把所有字符都占两字节处理(一般情况下)，varchar只对汉字和全角等字符占两字节  
+VARCHAR2字符要用几个字节存储，要看数据库使用的字符集  
+比如GBK，汉字就会占两个字节，英文1个  
+如果是UTF-8，汉字一般占3个字节，英文还是1个
+
+nvarchar/nvarchar2其值表字符  
+nvarchar2中所有字符均按照2个字节计算;nvarchar中字符为中文则一般按2个字节计算，英文数字等按照一个字节计算  
