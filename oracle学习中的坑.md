@@ -81,4 +81,21 @@ VARCHAR2字符要用几个字节存储，要看数据库使用的字符集
 如果是UTF-8，汉字一般占3个字节，英文还是1个
 
 >>nvarchar/nvarchar2其值表字符  
-nvarchar2中所有字符均按照2个字节计算;nvarchar中字符为中文则一般按2个字节计算，英文数字等按照一个字节计算  
+nvarchar2中所有字符均按照2个字节计算;nvarchar中字符为中文则一般按2个字节计算，英文数字等按照一个字节计算
+
+16.--查询各科成绩的前三名
+
+	SELECT ZTS#,ZTSNAME,ZTCNAME,ZTSCORE,ZT.r 排名 FROM
+		(SELECT SC.S# ZTS#,ST.SNAME ZTSNAME,c.Cname ZTCNAME,SC.SCORE ZTSCORE,
+			dense_rank() over(partition by SC.C# order by SC.SCORE desc) r FROM SC 
+			LEFT JOIN STUDENT st ON SC.S#=st.S#
+			LEFT JOIN COURSE c ON SC.C#=c.C#) ZT
+		WHERE ZT.r<=3;
+
+>over:  在什么条件之上。
+partition by SC.C#:  按课程编号划分（分区）。
+order by SC.SCORE desc:  按成绩从高到低排序（使用rank()/dense_rank() 时，必须要带order by否则非法）
+rank()/dense_rank():  分级，  
+那么rank()和dense_rank()有什么区别呢？
+>>rank():  跳跃排序，如果有两个第一级时，接下来就是第三级。
+dense_rank():  连续排序，如果有两个第一级时，接下来仍然是第二级。
