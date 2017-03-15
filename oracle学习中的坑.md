@@ -79,7 +79,6 @@ varchar2把所有字符都占两字节处理(一般情况下)，varchar只对汉
 VARCHAR2字符要用几个字节存储，要看数据库使用的字符集  
 比如GBK，汉字就会占两个字节，英文1个  
 如果是UTF-8，汉字一般占3个字节，英文还是1个
-
 >>nvarchar/nvarchar2其值表字符  
 nvarchar2中所有字符均按照2个字节计算;nvarchar中字符为中文则一般按2个字节计算，英文数字等按照一个字节计算
 
@@ -97,6 +96,5 @@ partition by SC.C#:  按课程编号划分（分区）。
 order by SC.SCORE desc:  按成绩从高到低排序（使用rank()/dense_rank() 时，必须要带order by否则非法）  
 rank()/dense_rank():  分级  
 那么rank()和dense_rank()有什么区别呢？
-
 >>rank():  跳跃排序，如果有两个第一级时，接下来就是第三级。  
 dense_rank():  连续排序，如果有两个第一级时，接下来仍然是第二级。
