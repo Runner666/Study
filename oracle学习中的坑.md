@@ -92,10 +92,11 @@ nvarchar2中所有字符均按照2个字节计算;nvarchar中字符为中文则�
 			LEFT JOIN COURSE c ON SC.C#=c.C#) ZT
 		WHERE ZT.r<=3;
 
->over:  在什么条件之上。
-partition by SC.C#:  按课程编号划分（分区）。
-order by SC.SCORE desc:  按成绩从高到低排序（使用rank()/dense_rank() 时，必须要带order by否则非法）
-rank()/dense_rank():  分级，  
+>over:  在什么条件之上。  
+partition by SC.C#:  按课程编号划分（分区）。  
+order by SC.SCORE desc:  按成绩从高到低排序（使用rank()/dense_rank() 时，必须要带order by否则非法）  
+rank()/dense_rank():  分级  
 那么rank()和dense_rank()有什么区别呢？
->>rank():  跳跃排序，如果有两个第一级时，接下来就是第三级。
+
+>>rank():  跳跃排序，如果有两个第一级时，接下来就是第三级。  
 dense_rank():  连续排序，如果有两个第一级时，接下来仍然是第二级。
