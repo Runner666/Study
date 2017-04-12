@@ -55,4 +55,4 @@ Cookie和session配合使用，通过验证cookie来跟踪会话，cookie是由�
 15、System.out.printf( "%1$-15s%2$03d %n", s1, x);讲解：格式化输出，%代表格式化，其后的代表格式，可以有多个格式，自动匹配字符串，默认第一个格式化指的是第一个字符串的，第二个格式化指第二个字符串。同时可以在%和格式之间添加n$，指代格式第几个字符串。
 
 16、修改Eclipse中只能提示的唤醒方式：Window--Proeprences--Editor--Content Assist  
-![关键处](https://github.com/houtu/Picture/Eclipse_Content_Assist.png)
+![在指定的地方做修改](github.com/houtu/Picture/Eclipse_Content_Assist.png)
