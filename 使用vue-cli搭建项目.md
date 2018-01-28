@@ -21,4 +21,12 @@
     vue init webpack project-name
 
 2.控制台会有如图所示参数配置的步骤
+
 ![vue-cli参数配置](Picture/vue-cli_to_init_project.png)
+
+3.到这里项目骨架搭建已经完成，下面可以运行如下命令，进行项目运行测试
+
+    cd sell
+    npm run vue
+    
+4.最后在浏览器中访问localhost:8080，查看结果。
