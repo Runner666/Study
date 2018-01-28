@@ -13,3 +13,12 @@
 4.安装vue-cli：  
 
     [c]npm install vue-cli -g  
+
+#### 二、正式开始使用vue-cli搭建项目
+
+1.使用vue脚手架搭建
+
+    vue init webpack project-name
+
+2.控制台会有如图所示参数配置的步骤
+![vue-cli参数配置](Picture/vue-cli_to_init_project.png)
