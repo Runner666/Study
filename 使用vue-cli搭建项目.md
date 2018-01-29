@@ -30,3 +30,83 @@
     npm run vue
     
 4.最后在浏览器中访问localhost:8080，查看结果。
+
+#### 三、vue2.0路由使用：
+
+1.在组件页面添加路由标签
+
+    <!-- 使用 router-link 组件来导航. -->
+    <router-link to="/goods">商品</router-link>；
+    
+2.添加route-vue
+
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
+    
+3.在mai.js页面编写路由相关代码
+
+    /* 将路由插件应用到vue上 */
+    Vue.use(VueRouter);
+
+    /* 定义路由组件，此处使用的是导入的组件 */
+    const goods= { template: goods }
+    
+    /* 配置路由映射表 */
+    const routes = [
+      {path: '/goods', component: goods}
+    ];
+
+    /* 创建 router 实例，然后传 `routes` 配置 */
+    const router = new VueRouter({
+    	routes
+    })
+
+    /* 创建和挂载根实例 */
+    new Vue({
+      el: '#app',
+      router: router,
+      template: '<App/>',
+      components: {
+        App
+      }
+    });
+    
+四、设置1px的边框
+
+1.编写1px的styl文件mixin.styl
+
+    border-1px($color)
+    position: relative
+      &:after
+        display: block
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        border-top: 1px solid $color
+        content: ' '
+2.编写适应不同设备的缩放文件base.styl
+
+    @media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+      .border-1px
+      &::after
+        -webkit-transform: scaleY(0.7)
+        transform: scaleY(0.7)
+
+    @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+      .border-1px
+      &::after
+        -webkit-transform: scaleY(1)
+        transform: scaleY(1)
+3.在组件文件里引用
+
+> 需要先在<style>里引入包含base.styl和mixin.styl的index.styl文件
+
+    <style>
+        @import "./common/stylus/index.styl";
+        ...
+    </style>
+    
+ > 给相应的标签写文件
+ 
+     border-1px(rgba(7, 17, 27, 0.1))
