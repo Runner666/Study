@@ -148,3 +148,32 @@
         border-1px(rgba(7, 17, 27, 0.1))
         
     </style>
+
+六、父组件向子组件传数据
+
+1.在main.js里注册vue-resource
+
+    Vue.use(VueResource);
+    
+2.将父组件需要传递到子组件的数据挂载到引用的子组件的标签上
+
+    <v-header :seller="seller"></v-header>
+    
+3.子组件对接传递的数据
+
+    <script>
+        export default {
+            props: {
+              seller: {
+                type: Object
+              }
+            }
+        };
+    </script>
+    
+4.在需要的地方使用数据
+
+    <div v-if="seller.supports" class="support">
+       <span class="icon" :class="classMap[seller.supports[0].type]"></span>
+       <span class="text">{{seller.supports[0].description}}</span>
+     </div>
