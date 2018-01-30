@@ -142,7 +142,9 @@
 
     <style>
         @import "./common/stylus/index.styl";
+        
         ...
+        
         border-1px(rgba(7, 17, 27, 0.1))
         
     </style>
