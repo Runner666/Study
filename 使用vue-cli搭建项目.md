@@ -14,7 +14,7 @@
 
     [c]npm install vue-cli -g  
 
-#### 二、正式开始使用vue-cli搭建项目
+#### 二、开始使用vue-cli搭建项目
 
 1.使用vue脚手架搭建  
 
@@ -38,7 +38,7 @@
     <!-- 使用 router-link 组件来导航. -->
     <router-link to="/goods">商品</router-link>；
     
-2.添加route-vue
+2.添加route-v
 
     <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
@@ -71,12 +71,48 @@
       }
     });
     
-四、设置1px的边框
+四、模拟后台数据
+
+1.在webpack.dev.conf.js编写引入数据相关的代码，在const portfinder = require(‘portfinder’)后添加
+
+    const express = require('express')
+    const app = express()//请求server
+    const appData = require('../data.json')//加载本地数据文件
+    const seller = appData.seller//获取对应的本地数据
+    const goods = appData.goods
+    const ratings = appData.ratings
+    const apiRoutes = express.Router()
+    app.use('/api', apiRoutes)//通过路由请求数据
+    
+2.编写数据路由，找到devServer,在里面加上before（）方法
+
+     before(app) {
+      app.get('/api/seller', (req, res) => {
+        res.json({
+          errno: 0,
+          data: seller
+        })//接口返回json数据，上面配置的数据seller就赋值给data请求后调用
+      }),
+        app.get('/api/goods', (req, res) => {
+          res.json({
+            errno: 0,
+            data: goods
+          })
+        }),
+        app.get('/api/ratings', (req, res) => {
+          res.json({
+            errno: 0,
+            data: ratings
+          })
+        })
+    }
+
+五、设置1px的边框
 
 1.编写1px的styl文件mixin.styl
 
     border-1px($color)
-    position: relative
+      position: relative
       &:after
         display: block
         position: absolute
@@ -85,6 +121,7 @@
         width: 100%
         border-top: 1px solid $color
         content: ' '
+
 2.编写适应不同设备的缩放文件base.styl
 
     @media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
@@ -98,6 +135,7 @@
       &::after
         -webkit-transform: scaleY(1)
         transform: scaleY(1)
+
 3.在组件文件里引用
 
 > 需要先在<style>里引入包含base.styl和mixin.styl的index.styl文件
@@ -105,8 +143,9 @@
     <style>
         @import "./common/stylus/index.styl";
         ...
+        
     </style>
     
- > 给相应的标签写文件
+ > 给相应的类写样式
  
      border-1px(rgba(7, 17, 27, 0.1))
