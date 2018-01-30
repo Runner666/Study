@@ -138,13 +138,10 @@
 
 3.在组件文件里引用
 
-> 需要先在<style>里引入包含base.styl和mixin.styl的index.styl文件
+> 需要先在<style>里引入包含base.styl和mixin.styl的index.styl文件，给相应的类写样式
 
     <style>
         @import "./common/stylus/index.styl";
-        ...
-    
- > 给相应的类写样式
- 
+        ... 
          border-1px(rgba(7, 17, 27, 0.1))
-     </style>
+    </style>
